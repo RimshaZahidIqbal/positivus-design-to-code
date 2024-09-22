@@ -149,7 +149,6 @@ height: Hug (68px)px; */
     align-items: baseline;
     padding-left: 100px;
     height: Hug (51px)px;
-
 }
 
 .services h3 {
@@ -597,5 +596,18 @@ footer .footer-container {
         width: 361.44px;
         height: auto;
         padding: 0px 34px 0px 34px;
+    }
+
+    /* hero section ends here  */
+    /* logos section starts here  */
+    .logos {
+        margin-top: 0px;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .logos img:nth-child(2) {
+        width: 126.37px;
+        padding: 9.07px 0.6px 11.7px 0px;
     }
 }
