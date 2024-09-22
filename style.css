@@ -149,11 +149,12 @@ height: Hug (68px)px; */
     align-items: baseline;
     padding-left: 100px;
     height: Hug (51px)px;
+    justify-content: start;
 }
 
 .services h3 {
 
-    padding: 0px 7px 0px 7px;
+    padding: 0px 7px;
     gap: 10px;
     border-radius: 7px;
     background-color: #B9FF66;
@@ -170,6 +171,7 @@ height: Hug (68px)px; */
 height: 46px; */
 }
 
+/* service code ends here */
 .cards {
     display: flex;
     flex-wrap: nowrap;
@@ -610,4 +612,35 @@ footer .footer-container {
         width: 126.37px;
         padding: 9.07px 0.6px 11.7px 0px;
     }
+
+    /* logos section ends here */
+    .services {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 0 20px;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .services h3 {
+        padding: 0px 7px;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 45.94px;
+    }
+
+    .services p {
+        width: 100%;
+        height: auto;
+        padding: 0 20px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    /* service code ends here */
 }
