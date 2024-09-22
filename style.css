@@ -548,4 +548,54 @@ footer .footer-container {
         position: absolute;
         right: 3.81px;
     }
+
+    /* nav bar ends here */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin: 40px 0 60px 0;
+        padding: 0;
+    }
+
+    .hero-left {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-left h1 {
+        height: auto;
+        font-size: 43px;
+        line-height: 54.87px;
+        padding: 0 20px 0px 20px;
+    }
+
+    .hero-left p {
+        width: 100%;
+        height: auto;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 0px 20px;
+    }
+
+    .hero-left button {
+        padding: 20px 35px 20px 35px;
+
+        border-radius: 14px;
+        background-color: #191A23;
+        color: #FFFFFF;
+        width: 90%;
+        align-self: center;
+        margin: 10px 20px;
+    }
+
+    .hero-right img {
+        width: 361.44px;
+        height: auto;
+        padding: 0px 34px 0px 34px;
+    }
 }
