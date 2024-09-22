@@ -172,22 +172,21 @@ height: 46px; */
 }
 
 /* service code ends here */
+/* cards start here  */
 .cards {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
-    height: Hug (310px)px;
-    gap: 40px;
-    opacity: 0px;
+    height: auto;
+    gap: 20px;
     align-items: center;
-
 }
 
 .card {
     width: 50%;
-    height: Hug (310px)px;
+    height: auto;
     border-radius: 45px;
     border: 1px solid black;
     display: flex;
@@ -198,13 +197,21 @@ height: 46px; */
 
 .card .card-img {
     width: 210px;
-    height: 170px;
-    padding: 70px auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 10px;
 }
 
 .card h3 {
     margin: 0;
     padding: 0;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 38.28px;
+    border-radius: 7px;
+    /* text-align: left; */
+    align-self: self-start;
 }
 
 .bg-green {
@@ -216,11 +223,7 @@ height: 46px; */
 }
 
 .card-body {
-    width: Fixed (600px)px;
-    height: Hug (310px)px;
     padding: 50px;
-    border-radius: 45px;
-    border: 1px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -233,9 +236,10 @@ height: 46px; */
 .inner {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 15px;
     margin-top: 93px;
+    align-items: center;
 
 }
 
@@ -244,6 +248,16 @@ height: 46px; */
     height: 41px;
 }
 
+.inner p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+}
+
+div.cards-sm {
+    display: none !important;
+}
 
 .box {
     box-shadow: 0px 5px 0px 0px #191A23;
@@ -275,7 +289,6 @@ height: 46px; */
     padding-top: 30px;
     border-top: 1px solid #ccc;
     margin-top: 30px;
-
 }
 
 .form-container {
@@ -488,6 +501,8 @@ footer .footer-container {
     padding-left: 70px;
 }
 
+
+
 @media only screen and (min-width: 431px) and (max-width:900px) {
 
     .nav-item,
@@ -515,6 +530,10 @@ footer .footer-container {
     .nav-left img {
         width: 144px;
         height: auto;
+    }
+
+    .cards {
+        display: none !important;
     }
 }
 
@@ -620,7 +639,7 @@ footer .footer-container {
         width: 100%;
         height: auto;
         padding: 0 20px;
-        gap: 30px;
+        margin: 30px auto;
         flex-direction: column;
     }
 
@@ -643,4 +662,97 @@ footer .footer-container {
     }
 
     /* service code ends here */
+    .cards {
+        display: none !important;
+    }
+
+    .cards-sm {
+        display: flex !important;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        height: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        align-items: center;
+    }
+
+    .cards-sm {
+        position: relative;
+    }
+
+    .card h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 38.28px;
+        border-radius: 7px;
+        align-self: self-start;
+    }
+
+    .card {
+        position: relative;
+    }
+
+    .card img {
+        position: absolute;
+    }
+
+    .card img .learn-more {
+        left: 0;
+        bottom: 0;
+    }
+
+    .card img .card-img {
+        left: 0;
+        bottom: 0;
+        width: 165px;
+        height: 116.47px;
+    }
+
+    /* boxes */
+
+    .box {
+        box-shadow: 0px 5px 0px 0px #191A23;
+        height: auto;
+        padding: 30px;
+        border-radius: 45px;
+        border: 1px solid black;
+        transition: all 0.3s ease;
+        background-color: #F3F3F3;
+    }
+
+    .upper {
+        display: flex;
+        justify-content: start;
+        position: relative;
+    }
+
+    .upper h2 {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 22.97px;
+        text-align: left;
+    }
+
+    .upper img {
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+    }
+
+    .content {
+        display: none;
+        padding-top: 20px;
+        border-top: 1px solid #ccc;
+        margin-top: 20px;
+    }
+
+    /* boxes css done  */
+
 }
