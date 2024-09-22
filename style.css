@@ -15,41 +15,33 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: Hug (68px)px;
-    padding: 0px 100px 0px 100px;
+    height: auto;
+    padding: 0px min(100px, 4%) 0px min(100px, 4%);
     margin-top: 60px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
 }
 
 .nav-left img {
-    width: Hug (219.54px)px;
-    height: Hug (56px)px;
+    /* width: Hug (219.54px)px;
+    height: Hug (56px)px; */
     padding: 10px 0px 10px 0px;
-    /* gap: 10px;
-    opacity: 0px;
-     */
 }
 
 .nav-right {
     display: flex;
     justify-content: space-evenly;
-    gap: 40px;
+    gap: 20px;
     align-items: baseline;
-
 }
 
 .nav-right .nav-item {
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
-    /* width: 67px;
-height: 28px; */
 }
 
 .nav-right button {
-    width: Hug (231px)px;
-    height: Hug (68px)px;
     padding: 20px 35px 20px 35px;
     gap: 10px;
     border-radius: 14px;
@@ -59,14 +51,15 @@ height: 28px; */
     font-weight: 400;
     line-height: 28px;
     text-align: center;
-
 }
 
-.nav-right .menu-icon {
-    margin-right: 20px;
+.menu-icon {
+    /* margin-right: 20px; */
     display: none;
+    /* visibility: hidden; */
 }
 
+/* nav bar ends here */
 .hero {
     display: flex;
     flex-direction: row;
@@ -494,9 +487,65 @@ footer .footer-container {
     padding-left: 70px;
 }
 
-@media only screen and (max-width: 430px) {
-    .nav-right .menu-icon {
-        margin-right: 20px;
+@media only screen and (min-width: 431px) and (max-width:900px) {
+
+    .nav-item,
+    .btn-request {
         display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        position: relative;
+    }
+
+    .menu-icon img {
+        width: 24px;
+        height: 16px;
+        border: 2px;
+        position: absolute;
+        right: 10px;
+    }
+
+    .nav-bar {
+        margin-top: 30px;
+    }
+
+    .nav-left img {
+        width: 144px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+
+    .nav-item,
+    .btn-request {
+        display: none;
+    }
+
+    .nav-left img {
+        width: 144px;
+        height: auto;
+    }
+
+    .nav-bar {
+        justify-content: space-between;
+        margin-top: 30px;
+
+    }
+
+    .menu-icon {
+        display: flex;
+        position: relative;
+        align-items: baseline;
+    }
+
+    .menu-icon img {
+        width: 24px;
+        height: 16px;
+        border: 2px;
+        position: absolute;
+        right: 3.81px;
     }
 }
