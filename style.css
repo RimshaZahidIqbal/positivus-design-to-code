@@ -743,7 +743,6 @@ footer .footer-container {
         cursor: pointer;
         width: 30px;
         height: 30px;
-        border: 1px solid black;
     }
 
     .content {
@@ -776,4 +775,124 @@ footer .footer-container {
         margin-top: 40px;
     }
 
+    /* form ends here */
+    footer .footer-container {
+        border-radius: 0;
+    }
+
+    .topsection-left {
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .topsection {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .topsection ul {
+        flex-direction: column !important;
+        list-style-type: none;
+        justify-content: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .topsection li {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22.97px;
+        text-align: center;
+        text-decoration: none;
+
+    }
+
+    .topsection-right {
+        align-items: center;
+    }
+
+    .topsection-right img {
+        padding: 0px 10px;
+        align-self: center;
+    }
+
+    .footer-contact {
+        flex-direction: column !important;
+        justify-content: center;
+        /* align-items: center; */
+        margin-bottom: 50px;
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    .address {
+        gap: 20px;
+    }
+
+    .address h4 {
+        padding: 0px 7px 0px 7px;
+        gap: 10px;
+        border-radius: 7px;
+        align-self: center;
+        text-align: center;
+    }
+
+    .address p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22.97px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .address p a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    .contact {
+        flex-direction: column !important;
+        margin-top: 37px;
+        margin-bottom: 37px;
+        justify-content: center !important;
+        padding: 30px;
+    }
+
+    #contact_email {
+        width: 100%;
+        align-self: center !important;
+        padding: 21px 25px 21px 25px;
+        border-radius: 14px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        margin: 0;
+    }
+
+    .btn-sub {
+        width: 100%;
+        align-self: center !important;
+        padding: 20px 35px 20px 35px;
+        gap: 10px;
+        border-radius: 14px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column !important;
+        justify-content: center;
+        text-align: center;
+        gap: 40px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        padding: 0px 51px 27px 51px;
+    }
+
+    .footer-bottom p {
+        align-self: center;
+    }
 }
