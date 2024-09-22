@@ -755,4 +755,25 @@ footer .footer-container {
 
     /* boxes css done  */
 
+    .web-form,
+    .web-form img {
+        display: none !important;
+    }
+
+    .form-container form {
+        width: 95%;
+        margin: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 10px 30px 10px 30px;
+    }
+
+    .radio {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+
 }
