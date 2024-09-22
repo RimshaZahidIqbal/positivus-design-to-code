@@ -230,7 +230,6 @@ height: 46px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    opacity: 0px;
 }
 
 #card2 {
@@ -337,7 +336,7 @@ height: 46px; */
 
 /* form css */
 .form-check-input:checked[type=radio] {
-    background-image: url('./images/logos/Ellipse\ 27.png');
+    background-image: url('./images/logos/Radiobutton.svg');
 }
 
 .form-check-input:checked {
@@ -372,8 +371,8 @@ height: 46px; */
     border: 1px solid black !important;
 }
 
-footer .form-container {
-    border-radius: 45px, 45px, 0px, 0px;
+footer .footer-container {
+    border-radius: 45px 45px 0 0;
 }
 
 .footer-upper {
@@ -382,7 +381,7 @@ footer .form-container {
 
 .topsection {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .topsection ul {
@@ -391,8 +390,108 @@ footer .form-container {
     gap: 40px
 }
 
+.topsection li {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.97px;
+    text-align: left;
+    text-decoration: underline;
+
+}
+
 .topsection-right img {
     padding: 0px 10px;
+}
+
+.footer-contact {
+    justify-content: space-around;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.address {
+    gap: 20px;
+}
+
+.address h4 {
+    /* width: Hug (126px)px;
+    height: Hug (26px)px; */
+    padding: 0px 7px 0px 7px;
+    gap: 10px;
+    border-radius: 7px;
+    align-self: flex-start;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25.52px;
+    text-align: left;
+}
+
+.address p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.97px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.address p a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+
+.contact {
+    margin-top: 58px;
+    margin-bottom: 58px;
+    justify-content: space-around;
+    padding: 58px, 40px;
+    gap: 20px;
+    /* width: Hug (634px)px;
+        height: Hug (184px)px; */
+    align-items: center;
+    border-radius: 14px;
+    background-color: #292A32;
+}
+
+#contact_email {
+    /* width: 285px;
+    height: 67px; */
+    padding: 22px 35px 22px 35px;
+    border: 1px solid #FFFFFF;
+    background-color: #292A32;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.97px;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+.btn-sub {
+    /* width: 249px;
+    height: 68px; */
+    padding: 20px 35px 20px 35px;
+    gap: 10px;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+.footer-bottom {
+    justify-content: flex-start;
+    gap: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    padding: 50px auto 50px 60px;
+    padding-left: 70px;
 }
 
 @media only screen and (max-width: 430px) {
