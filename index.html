@@ -26,18 +26,18 @@
             <div class="nav-left">
                 <img src="./images/Logo.png" alt="">
             </div>
-            <div class="nav-right">
+            <div class="nav-right nav-items-container">
                 <div class="nav-item">About Us</div>
                 <div class="nav-item">Services</div>
                 <div class="nav-item">Use Cases</div>
                 <div class="nav-item">Pricing </div>
                 <div class="nav-item">Blog</div>
                 <button class="btn-request">Request a quote</button>
-                <div class=" nav-item menu-icon">
-                    <img src="./images/Burger menu icon.png" alt="">
-                </div>
-            </div>
 
+            </div>
+            <div class="  menu-icon" onclick="toggleMenu()">
+                <img src="./images/Burger menu icon.png" alt="">
+            </div>
         </nav>
     </header>
     <!-- hero section start  -->
@@ -101,32 +101,20 @@
     <!-- small cards -->
     <div class=" container d-flex cards-sm ">
         <div class="card ">
-            
-                <h3 class="text-green">Search Engine </h3>
-                <h3 class="text-green"> Optimization </h3>
-                <div class="inner ">
-                    <img class= "learn-more" src="./images/Icon.svg" alt="">
-                    <img class="card-img" src="./images/tokyo-selecting-a-value-in-the-browser-window 1.png" alt="">
-                </div>
-            
-        </div>
 
-        <!-- <div class="card bg-green ">
-            <div class="card-body " id="card2">
-                <h3 class="text-dark bg-light">Pay-per-click </h3>
-                <h3 class="text- bg-light"> advertising</h3>
-                <div class="inner">
-                    <img src="./images/Icon.svg" alt="">
-                    <p>Learn more</p>
-                </div>
+            <h3 class="text-green">Search Engine </h3>
+            <h3 class="text-green"> Optimization </h3>
+            <div class="inner ">
+                <img class="learn-more" src="./images/Icon.svg" alt="">
+                <img class="card-img" src="./images/tokyo-selecting-a-value-in-the-browser-window 1.png" alt="">
             </div>
-            <img class="card-img" src="./images/tokyo-selecting-a-value-in-the-browser-window 1.png" alt="">
-        </div> -->
+
+        </div>
     </div>
 
 
     <!-- working products -->
-    <div class=" container d-flex .flex-column    ps-0 services">
+    <div class=" container d-flex .flex-column    ps-3 services">
         <h3>Our Working Process </h3>
         <p>Step-by-Step Guide to Achieving <br> Your Business Goals</p>
     </div>
@@ -256,7 +244,7 @@
                             <li>Blog</li>
                         </ul>
                     </div>
-                    <div class="topsection-right">
+                    <div class="topsection-right d-flex">
                         <img src="./images/logos/Social icon-1.png" alt="">
                         <img src="./images/logos/Social icon-2.png" alt="">
                         <img src="./images/logos/Social icon-3.png" alt="">
@@ -295,23 +283,40 @@
         crossorigin="anonymous"></script>
 
     <script>
-        function toggleAccordion(element) {
-            const content = element.nextElementSibling;
-            const isVisible = content.style.display === "block";
+       function toggleAccordion(element) {
+            const content = element.nextElementSibling; // Get the next sibling (content)
+            const isVisible = content.style.display === "block"; // Check if content is visible
 
-            // Close all accordions and reset their background color
+            // Close all accordions, reset their background color, and revert image to plus-icon
             const allContents = document.querySelectorAll('.content');
             const allBoxes = document.querySelectorAll('.box');
+            const allImages = document.querySelectorAll('.upper img');
 
             allContents.forEach((item) => item.style.display = 'none');
-            allBoxes.forEach((box) => box.style.backgroundColor = '#F3F3F3'); // Reset to default background color
+            allBoxes.forEach((box) => box.classList.remove('bg-green')); // Remove bg-green class
+            allImages.forEach((img) => img.src = './images/logos/plus-icon.png'); // Revert to plus icon
 
             // Toggle the current accordion
             if (!isVisible) {
-                content.style.display = 'block';
-                element.parentElement.style.backgroundColor = '#B9FF66'; // Set to new color
+                content.style.display = 'block'; // Show the content
+                element.closest('.box').classList.add('bg-green'); // Add the bg-green class to the closest .box
+                const img = element.querySelector('img');
+                img.src = './images/logos/minus-icon.png'; // Change image to minus icon
             }
         }
+
+
+        function toggleMenu() {
+            const navItemsContainer = document.querySelector('.nav-items-container');
+
+
+            if (navItemsContainer.style.display === 'block') {
+                navItemsContainer.style.display = 'none';
+            } else {
+                navItemsContainer.style.display = 'block';
+            }
+        }
+
 
 
     </script>
