@@ -39,7 +39,19 @@
                 <img src="./images/Burger menu icon.png" alt="">
             </div>
         </nav>
+
     </header>
+    <div id="side-menu" class="side-menu">
+        <span class="close-btn">&times;</span>
+
+        <div class="item">About Us</div>
+        <div class="item">Services</div>
+        <div class="item">Use Cases</div>
+        <div class="item">Pricing </div>
+        <div class="item">Blog</div>
+        <button class="btn-request-sm btn-lg ">Request a quote</button>
+    </div>
+
     <!-- hero section start  -->
     <div class="hero">
         <div class="hero-left">
@@ -71,12 +83,31 @@
         </p>
     </div>
     <!-- cards -->
-    <div class=" container d-flex cards ">
+
+    <div class=" container d-flex cards justify-content-center">
+        <div class="card ">
+            <div class="card-body">
+                <div class="card-heading">
+                    <h3 class="text-green">Search Engine </h3>
+                    <h3 class="text-green"> Optimization </h3>
+                </div>
+                <div class="inner ">
+                    <img class="card-img" src="./images/tokyo-selecting-a-value-in-the-browser-window 1.png" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <img src="./images/Icon.svg" alt="">
+                <p>Learn more</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    <div class=" container d-flex cards justify-content-center">
         <div class="card ">
             <div class="card-body ">
                 <h3 class="text-green">Search Engine </h3>
                 <h3 class="text-green"> Optimization </h3>
-
                 <div class="inner ">
                     <img src="./images/Icon.svg" alt="">
                     <p>Learn more</p>
@@ -96,10 +127,10 @@
             </div>
             <img class="card-img" src="./images/tokyo-selecting-a-value-in-the-browser-window 1.png" alt="">
         </div>
-    </div>
+    </div> -->
 
     <!-- small cards -->
-    <div class=" container d-flex cards-sm ">
+    <!-- <div class=" container d-flex cards-sm ">
         <div class="card ">
 
             <h3 class="text-green">Search Engine </h3>
@@ -110,7 +141,7 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
 
     <!-- working products -->
@@ -283,7 +314,7 @@
         crossorigin="anonymous"></script>
 
     <script>
-       function toggleAccordion(element) {
+        function toggleAccordion(element) {
             const content = element.nextElementSibling; // Get the next sibling (content)
             const isVisible = content.style.display === "block"; // Check if content is visible
 
@@ -304,18 +335,23 @@
                 img.src = './images/logos/minus-icon.png'; // Change image to minus icon
             }
         }
-
-
         function toggleMenu() {
-            const navItemsContainer = document.querySelector('.nav-items-container');
-
-
-            if (navItemsContainer.style.display === 'block') {
-                navItemsContainer.style.display = 'none';
+            const sideMenu = document.getElementById('side-menu');
+            if (sideMenu.classList.contains('active')) {
+                sideMenu.classList.remove('active');
+                setTimeout(() => {
+                    sideMenu.style.display = 'none';
+                }, 300); // Wait for transition to complete before hiding
             } else {
-                navItemsContainer.style.display = 'block';
+                sideMenu.style.display = 'block'; // Make sure the menu is visible
+                setTimeout(() => {
+                    sideMenu.classList.add('active');
+                }, 10); // Delay for transition 
             }
         }
+        document.querySelector('.close-btn').addEventListener('click', function () {
+            toggleMenu(); // Reuse the toggleMenu function
+        });
 
 
 
